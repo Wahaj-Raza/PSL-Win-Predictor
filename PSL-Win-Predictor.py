@@ -2,7 +2,6 @@ import streamlit as st
 
 
 from PIL import Image
-import matplotlib.pyplot as plt
 import plotly.express as px
 import pickle
 import numpy as np
@@ -63,7 +62,9 @@ if submit_button:
     fig = px.pie(prediction, values = prediction[0][:], names=[Team1, Team2], title='Match winning percentage for both the Teams')
     st.plotly_chart(fig)
     st.success("Interpretation : There is a "+str(round(prediction[0][0] * 100))+ "% chance the team batting second ("+ Team2 +") is going to lose (or the first team ("+ Team1 +") is going to win) and a " + str(round(prediction[0][1] * 100))+"% chance that ("+ Team2 +") will win.")
-st.title('_Created By Wahaj Raza_')
+
+st.markdown("<h1 style = 'color:White; Text-align: Center; font-size: 30px;'>Created By Wahaj Raza</h1>", unsafe_allow_html=True)
+    
 
 
 
