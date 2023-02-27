@@ -59,7 +59,11 @@ if submit_button:
     prediction = xgbc_model.predict_proba(input_data_df)
     # Create a pieplot
     print(prediction)
-    fig = px.pie(prediction, values = prediction[0][:], names=[Team1, Team2], title='Match winning percentage for both the Teams')
+    fig = px.pie(prediction, 
+                values=prediction[0][:], 
+                names=[Team1, Team2], 
+                title='Match winning percentage for both the Teams', 
+                color_discrete_sequence=['green', 'blue'])    
     st.plotly_chart(fig)
     st.success("Interpretation : There is a "+str(round(prediction[0][0] * 100))+ "% chance the team batting second ("+ Team2 +") is going to lose (or the first team ("+ Team1 +") is going to win) and a " + str(round(prediction[0][1] * 100))+"% chance that ("+ Team2 +") will win.")
 
