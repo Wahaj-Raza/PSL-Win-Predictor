@@ -11,7 +11,7 @@ import pandas as pd
 xgbc_model = pickle.load(open("./PSL-Win-XGBC-model.pkl", "rb"))
 
 # Title
-st.markdown("<h1 style = 'color:Gold; Text-align: Center; font-size: 40px;'>Pakistan Super League (PSL) Win Predictor</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style = 'color:Green; Text-align: Center; font-size: 45px;'>Pakistan Super League-8 Win Predictor</h1>", unsafe_allow_html=True)
 
 img = Image.open("./PSL-8.jpg")
   
@@ -32,16 +32,16 @@ Team2 = form.selectbox(
 
 
 ## Target for the team batting 2nd
-target = form.text_input('Target For the Team Batting Second', 110)
+target = form.text_input('Target', 0)
 
 ## Current runs of the team batting 2nd
-cur_runs = form.text_input('Current Runs of the Team Batting Second', 10)
+cur_runs = form.text_input('Current Runs of the Team Batting Second', 0)
 
 ## Current wickets of the team batting 2nd
-wickets = form.text_input('Current Wickets of the Team Batting Second', 5.0)
+wickets = form.text_input('Current Wickets of the Team Batting Second', 0)
 
 ## Current overs of the team batting 2nd
-overs = form.text_input('Current Overs Played by the Team Batting Second', 5.5)
+overs = form.text_input('Current Overs Played by the Team Batting Second', 0.0)
 submit_button = form.form_submit_button(label = 'Predict Win Percentage')
 
 if submit_button:
