@@ -67,7 +67,7 @@ if submit_button:
     st.plotly_chart(fig)
     st.success("Interpretation : There is a "+str(round(prediction[0][0] * 100))+ "% chance the team batting second ("+ Team2 +") is going to lose (or the first team ("+ Team1 +") is going to win) and a " + str(round(prediction[0][1] * 100))+"% chance that ("+ Team2 +") will win.")
 
-st.markdown("<h1 style = 'color:White; Text-align: Center; font-size: 30px;'>Created By Wahaj Raza</h1>", unsafe_allow_html=True)
+# st.markdown("<h1 style = 'color:White; Text-align: Center; font-size: 30px;'></h1>", unsafe_allow_html=True)
     
 
 
